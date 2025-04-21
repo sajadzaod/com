@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mew</title>
+    <meta name="viewport" content="width=device-width, scale=1.0">
+</head>
+<body>
+        <nav id="h2">
+            <ul id="Home"><a href="#">Home</a></ul>
+            <ul id="About"><a href="#">About</a></ul>
+            <ul id="Tech"><a href="#">Technology</a></ul>
+            <ul id="Learn"><a href="#">Contant</a></ul>
+        </nav>
+        <style>
+/* Reset و تنظیمات پایه */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: black;
+    height: 2000px;
+}
+/* ناوبری */
+#h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+#h2 h2 {
+    margin: 0;
+}
+#h2 a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 5px 10px;
+}
+#Home:hover{
+    transform:scale(1.1) ;
+    text-shadow: 4px 4px 10px #FFF;
+    border: #0abde3 solid 1px;
+    background-color: #0abde3;
+    border-radius: 10px;
+}
+#About:hover{
+    transform:scale(1.1) ;
+    text-shadow: 4px 4px 10px #FFF;
+    border: #0abde3 solid 1px;
+    background-color: #0abde3;
+    border-radius: 10px;
+}
+#Tech:hover{
+    transform:scale(1.1) ;
+    text-shadow: 4px 4px 10px #FFF;
+    border: #0abde3 solid 1px;
+    background-color: #0abde3;
+    border-radius: 10px;
+}
+#Learn:hover{
+    transform:scale(1.1) ;
+    text-shadow: 4px 4px 10px #FFF;
+    border: #0abde3 solid 1px;
+    background-color: #0abde3;
+    border-radius: 10px;
+    
+}
+.HTML:hover{
+  transform: translateY(-1rem);
+}
+/* ===== BASE STYLES ===== */
+:root {
+  /* رنگ‌های تم روشن */
+  --light-bg: #ffffff;
+  --light-text: #000000;
+  --light-progress-track: #f0f0f0;
+  --light-box-bg: #ffffff;
+  
+  /* رنگ‌های تم تاریک */
+  --dark-bg: #121212;
+  --dark-text: #ffffff;
+  --dark-progress-track: #2d2d2d;
+  --dark-box-bg: #2d2d2d;
+  
+  /* رنگ‌های ثابت برای نوارهای پیشرفت */
+  --html-color: #e34c26;
+  --css-color: #2965f1;
+  --sass-color: #d81687;
+  --js-color: #f0db4f;
+  --node-color: #009432;
+  --bootstrap-color: #B53471;
+  --python-color: linear-gradient(to left, #0652DD 10%, #FFC312);
+}
+
+/* ===== SKILL BOXES ===== */
+.HTML-box, .CSS-box, .SASS-box, 
+.JS-box, .NJS-box, .BS-box, .PY-box {
+  position: relative;
+  top: 20%;
+  background-color: var(--dark-box-bg);
+  border: 5px solid var(--dark-box-bg);
+  border-radius: 10px;
+  padding: 3%;
+  z-index: -100;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* نوارهای پیشرفت */
+.HTML, .CSS, .SASS, .JS, .NODE, .boot, .py {
+  position: absolute;
+  left: 12%;
+  width: 80%;
+  background-color: var(--dark-progress-track);
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+
+/* تنظیمات موقعیت هر نوار */
+.HTML { top: 90%; }
+.CSS { top: 108%; }
+.SASS { top: 126%; }
+.JS { top: 144%; }
+.NODE { top: 162%; }
+.boot { top: 180%; }
+.py { top: 198%; }
+
+/* استایل نوارهای پر شونده */
+.HTML-bar, .CSS-bar, .SASS-bar, 
+.JS-bar, .NODE-bar, .boot-bar, .py-bar {
+  height: 30px;
+  text-align: left;
+  line-height: 30px;
+  color: white;
+  border-radius: 20px;
+}
+
+/* رنگ‌های نوارها */
+.HTML-bar { background-color: var(--html-color); }
+.CSS-bar { background-color: var(--css-color); }
+.SASS-bar { background-color: var(--sass-color); }
+.JS-bar { background-color: var(--js-color); }
+.NODE-bar { background-color: var(--node-color); }
+.boot-bar { background-color: var(--bootstrap-color); }
+.py-bar { background: var(--python-color); }
+
+/* انیمیشن‌ها */
+@keyframes fill {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes fill1 {
+  from { width: 0; }
+  to { width: 80%; }
+}
+
+@keyframes fill3 {
+  from { width: 0; }
+  to { width: 1%; }
+}
+@keyframes fill4 {
+  from { width: 0; }
+  to { width: 1%; }
+}
+@keyframes fill5 {
+  from { width: 0; }
+  to { width: 1%; }
+}
+@keyframes fill6 {
+  from { width: 0; }
+  to { width: 1%; }
+}
+@keyframes fill7 {
+  from { width: 0; }
+  to { width: 1%; }
+}
+.HTML-bar { animation: fill 3s ease 0.5ms forwards; }
+.CSS-bar { animation: fill1 3s ease 0.5ms forwards; }
+.SASS-bar { animation: fill3 3s ease 0.5ms forwards; }
+.JS-bar { animation: fill4 3s ease 0.5ms forwards; }
+.NODE-bar { animation: fill5 3s ease 0.5ms forwards; }
+.boot-bar { animation: fill6 3s ease 0.5ms forwards; }
+.py-bar { animation: fill7 3s ease 0.5ms forwards; }
+
+/* ===== LABELS ===== */
+#h, #c, #s, #j, #n, #b, #p {
+  position: absolute;
+  left: 1%;
+  top: 10%;
+  font-weight: 400;
+  color: var(--dark-text);
+  transition: color 0.3s;
+}
+
+/* ===== HOVER EFFECTS ===== */
+.CSS:hover, .SASS:hover, .JS:hover, 
+.NODE:hover, .boot:hover, .py:hover,.HTML:hover {
+  transform: translateY(-1rem);
+  transition: transform 0.7s ease;
+}
+
+/* ===== LIGHT THEME STYLES ===== */
+body:not(.dark-theme) {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+body:not(.dark-theme) .HTML-box,
+body:not(.dark-theme) .CSS-box,
+body:not(.dark-theme) .SASS-box,
+body:not(.dark-theme) .JS-box,
+body:not(.dark-theme) .NJS-box,
+body:not(.dark-theme) .BS-box,
+body:not(.dark-theme) .PY-box {
+  background-color: var(--light-box-bg);
+  border-color: #e0e0e0;
+}
+
+body:not(.dark-theme) .HTML,
+body:not(.dark-theme) .CSS,
+body:not(.dark-theme) .SASS,
+body:not(.dark-theme) .JS,
+body:not(.dark-theme) .NODE,
+body:not(.dark-theme) .boot,
+body:not(.dark-theme) .py {
+  background-color: var(--light-progress-track);
+}
+
+body:not(.dark-theme) #h,
+body:not(.dark-theme) #c,
+body:not(.dark-theme) #s,
+body:not(.dark-theme) #j,
+body:not(.dark-theme) #n,
+body:not(.dark-theme) #b,
+body:not(.dark-theme) #p {
+  color: var(--light-text);
+}
+.social-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+  .social-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .social-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2d2d2d;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7);
+    transition: all 0.3s ease-in-out;
+  }
+  .social-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+  }
+  .social-icon:hover {
+    box-shadow: 0px 0px 25px rgba(0, 255, 255, 1);
+    transform: scale(1.1) translateY(-5px);
+  }
+#qqq{
+color: #FFF;
+}
+p{ 
+    position: absolute;
+    justify-items: center;
+}
+.download-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 24px;
+    background: #0abde3;
+    position: relative;
+    top: 5em;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 300px; /* عرض ثابت */
+    height: 150px;
+    text-align: center;
+    text-decoration: none;
+}
+.download-btn:hover{
+    background-color: #0abde3;
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 1);
+    transform: scale(1.1);
+    transform: translateY(-1rem);
+}
+  #g{
+    background-color: #009432;
+  }
+  @media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }   
+    #h2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    #home1 {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 768px) {
+    .download-btn {
+        width: 80%;
+        padding: 15px 0;
+        font-size: 1.1rem;
+    }
+}
+  /* نسخه موبایل */
+  @media (max-width: 768px) {
+    .social-footer {
+      padding: 15px 0;
+    } 
+    .social-icon {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  @media (max-width: 480px) {
+    .social-container {
+      gap: 20px;
+    }
+    .social-icon {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  /* سیستم تم با اولویت بالا */
+:root {
+    /* تم روشن (پیش‌فرض) */
+    --light-bg: #ffffff;
+    --light-text: #0000;
+    --light-accent: #0abde3; 
+    /* تم تاریک */
+    --dark-bg: #121212;
+    --dark-text: #fff;
+    --dark-accent: #009432;
+  }
+  /* اعمال تم پیش‌فرض */
+  body {
+    --bg-color: var(--light-bg);
+    --text-color: var(--light-text);
+    --accent-color: var(--light-accent); 
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: background-color 0.5s, color 0.5s !important;
+  }
+  /* حالت تاریک */
+  body.dark-theme {
+    --bg-color: var(--dark-bg);
+    --text-color: var(--dark-text);
+    --accent-color: var(--dark-accent);
+  }
+  /* دکمه تغییر تم */
+  .theme-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 30px;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    z-index: 9999;
+    transition: all 0.3s;
+  }
+  .theme-btn:hover {
+    transform: scale(1.1);
+  }
+  .sun, .moon {
+    font-size: 18px;
+    transition: all 0.3s;
+  }
+  /* انیمیشن تغییر تم */
+  body.dark-theme .sun {
+    transform: translateX(-30px) rotate(-90deg);
+    opacity: 0;
+  }
+  body.dark-theme .moon {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  body:not(.dark-theme) .sun {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  body:not(.dark-theme) .moon {
+    transform: translateX(30px) rotate(90deg);
+    opacity: 0;
+  }
+  /* تنظیمات خاص برای عناصر سایت */
+  .dark-theme #h2 a {
+    color: var(--text-color) !important;
+  }
+  .dark-theme .HTML,
+  .dark-theme .CSS,
+  .dark-theme .SASS,
+  .dark-theme .JS,
+  .dark-theme .NODE,
+  .dark-theme .boot,
+  .dark-theme .py {
+    background-color: #2d2d2d !important;
+    
+  }
+  .dark-theme .social-icon {
+    background-color: #fff !important;
+    box-shadow: 0px 0px 15px rgba(0, 200, 200, 0.7) !important;
+  }
+  .dark-theme .social-icon:hover {
+    box-shadow: 0px 0px 25px rgba(0, 200, 200, 1) !important;
+  }
+  /* اضافه کردن این کد به فایل CSS شما */
+body:not(.dark-theme) {
+    color: #000000 !important;
+  }
+  body:not(.dark-theme) #h2 a,
+  body:not(.dark-theme) #qqq,
+  body:not(.dark-theme) #h,
+  body:not(.dark-theme) #c,
+  body:not(.dark-theme) #s,
+  body:not(.dark-theme) #j,
+  body:not(.dark-theme) #n,
+  body:not(.dark-theme) #b,
+  body:not(.dark-theme) #p {
+    color: #000000 !important;
+  }
+
+          
+        </style>
+<div class="HTML">
+  <span id="h">HTML</span>
+  <div class="HTML-box">
+    <div class="HTML-bar"></div>
+</div>
+</div>
+<div class="CSS">
+  <span id="c">CSS</span>
+  <div class="CSS-box">
+    <div class="CSS-bar"></div>
+</div>
+</div>
+<div class="SASS">
+  <span id="s">SASS</span>
+  <div class="SASS-box">
+    <div class="SASS-bar"></div>
+</div>
+</div>
+<div class="JS">
+  <div class="JS-box">
+    <span id="j">JAVA SCRIPT</span>
+    <div class="JS-bar"></div>
+</div>
+</div>
+<div class="NODE">
+  <div class="NJS-box">
+  <span id="n">NODE.JS</span>
+    <div class="NODE-bar"></div>
+</div>
+</div>
+    <div class="boot">
+      <span id="b">BOOT STRAP</span>
+      <div class="BS-box">
+        <div class="boot-bar"></div>
+    </div>
+  </div>
+    <div class="py">
+      <div class="PY-box">
+      <span id="p">PYTHON</span>
+        <div class="py-bar"></div>
+    </div>
+  </div>
+    <footer class="social-footer">
+        <div class="social-container">
+          <a href="#" class="social-icon discord">
+            <img src="./icons8-discord-94.png" alt="Discord">
+          </a>
+          <a href="#" class="social-icon github">
+            <img src="./icons8-github-100.png" alt="GitHub">
+          </a>
+      </footer>
+    <div id="qqq">
+    
+</div>
+<button class="download-btn">Download</button>
+</div>
+    <!-- در بخش <body> -->
+    <button id="theme-toggle" class="theme-btn" aria-label="تغییر تم">
+      <span class="sun">☀️</span>
+      <span class="moon">🌙</span>
+    </button>
+</body>
+</html>
+<script>
+// جایگزین کردن کد قبلی با این نسخه
+document.addEventListener('DOMContentLoaded', function() {
+  const themeToggle = document.getElementById('theme-toggle');
+  
+  // اعمال تم اولیه
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+  } else {
+    document.body.classList.remove('dark-theme');
+    document.body.style.color = '#000000'; // تضمین رنگ مشکی در حالت روشن
+  }
+  
+  // تغییر تم با کلیک
+  themeToggle.addEventListener('click', function() {
+    document.body.classList.toggle('dark-theme');
+    
+    if (document.body.classList.contains('dark-theme')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+      document.body.style.color = '#000000'; // تنظیم مجدد رنگ مشکی
+    }
+  });
+});
+</script>
